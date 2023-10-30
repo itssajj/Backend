@@ -26,9 +26,9 @@ MEDIA_ROOT = BASE_DIR / ""
 SECRET_KEY = 'django-insecure-a-*=177(1128_tqr^&rrl%96&6q-7q25ztvayjep@l=9*uyklk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'False'
+DEBUG = 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-         'whitenoise.middleware.WhiteNoiseMiddleware',
+        #  'whitenoise.middleware.WhiteNoiseMiddleware',
 
      'django.contrib.sessions.middleware.SessionMiddleware',
     #  'django.middleware.csrf.CsrfViewMiddleware',
