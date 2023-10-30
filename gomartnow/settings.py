@@ -26,9 +26,9 @@ MEDIA_ROOT = BASE_DIR / ""
 SECRET_KEY = 'django-insecure-a-*=177(1128_tqr^&rrl%96&6q-7q25ztvayjep@l=9*uyklk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+         'whitenoise.middleware.WhiteNoiseMiddleware',
+
      'django.contrib.sessions.middleware.SessionMiddleware',
     #  'django.middleware.csrf.CsrfViewMiddleware',
      'django.contrib.auth.middleware.AuthenticationMiddleware',
