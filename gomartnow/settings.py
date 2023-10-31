@@ -116,17 +116,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'gomartnow.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '4-364g4*Efa1DE4F1BdFC33A3g6-AG*A',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': '51548',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -185,10 +182,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [
+STATICFILES_DIRS = [
 
-# os.path.join(BASE_DIR,'gomart/build/static')
-# ]
+os.path.join(BASE_DIR,'gomart/build/static')
+]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'gomart/build')
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'gomart/build')
 # os.path.join(BASE_DIR,'gomart/build')
@@ -222,5 +219,3 @@ REST_FRAMEWORK = {
 #         'STATS_FILE': os.path.join(BASE_DIR, 'gomart', 'webpack-stats.json'),
 #     }
 # }
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
